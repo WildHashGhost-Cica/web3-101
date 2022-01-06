@@ -1,4 +1,4 @@
-import { useMoralis } from 'react-moralis';
+import { ByMoralis, useMoralis } from 'react-moralis';
 import Image from 'next/image';
 import Avatar from './Avatar';
 import ChangeUsername from './ChangeUsername';
@@ -7,7 +7,7 @@ function Header() {
     const {user} = useMoralis();
 
     return (
-        <div className='sticky top-0 p-5 z-50 bg-gradient-to-r from-purple-900 shadow-lg border-b-4 border-blue-900'>
+        <div className='sticky top-0 p-5 z-50 bg-gradient-to-l shadow-lg border-b-4 border-blue-900'>
            <div className='grid grid-cols-5 lg:grid-cols-6 items-end lg:items-center'>
                <div className='relative h-24 w-24 mx-auto left-20 hidden
                lg:inline-grid'>
@@ -28,6 +28,11 @@ function Header() {
                
                   
            </div>
+           <div className="sticky mt-5">
+                <ByMoralis 
+                variant="light"
+                style={{marginLeft:'auto', marginRight:'auto'}}/>
+            </div>
         </div>
     )
 }
